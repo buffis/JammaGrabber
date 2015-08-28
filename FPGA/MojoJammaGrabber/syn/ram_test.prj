@@ -1,0 +1,2 @@
+verilog work "../src/pn_gen.v"
+verilog work "../src/ram_test.v"

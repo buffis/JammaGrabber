@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\githome\projects\JammaGrabber\FPGA\MojoJammaGrabber\syn\mojo_top.ncd
+OUTFILE=D:\githome\projects\JammaGrabber\FPGA\MojoJammaGrabber\syn\mojo_top.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=D:\githome\projects\JammaGrabber\FPGA\MojoJammaGrabber\syn
+LICENSE=WebPack
+USER_INFO=210902836_0_0_022

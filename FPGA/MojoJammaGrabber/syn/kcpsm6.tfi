@@ -1,0 +1,22 @@
+
+
+
+// Instantiate the module
+kcpsm6 instance_name (
+    .address(address), 
+    .instruction(instruction), 
+    .bram_enable(bram_enable), 
+    .in_port(in_port), 
+    .out_port(out_port), 
+    .port_id(port_id), 
+    .write_strobe(write_strobe), 
+    .k_write_strobe(k_write_strobe), 
+    .read_strobe(read_strobe), 
+    .interrupt(interrupt), 
+    .interrupt_ack(interrupt_ack), 
+    .sleep(sleep), 
+    .reset(reset), 
+    .clk(clk)
+    );
+
+

@@ -1,0 +1,29 @@
+Command line:
+   tvp_sampler_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55163
+
+Thu Aug 20 21:46:06 2015
+
+
+ Elaboration Time: 0.0312 sec
+
+ Current Memory Usage: 663.339 Meg
+
+ Total Signals          : 28
+ Total Nets             : 148
+ Total Signal Drivers   : 22
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 28
+ Total Traceable Variables  : 41
+ Total Scalar Nets and Variables : 450
+Total Line Count : 75
+
+ Total Simulation Time: 0.171601 sec
+
+ Current Memory Usage: 663.339 Meg
+
+Fri Aug 21 21:34:21 2015
+

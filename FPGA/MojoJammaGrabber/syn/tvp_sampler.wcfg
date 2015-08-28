@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/githome/projects/AvrStuff/JammaTestBoard/Verilog/Mojo-SDRAM/syn/tvp_sampler_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tvp_sampler_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/tvp_sampler_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/g" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">g[7:0]</obj_property>
+      <obj_property name="ObjectShortName">g[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/sample_clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sample_clock</obj_property>
+      <obj_property name="ObjectShortName">sample_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/leds" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/is_rising_edge_sample_clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">is_rising_edge_sample_clock</obj_property>
+      <obj_property name="ObjectShortName">is_rising_edge_sample_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[22:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/rw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rw</obj_property>
+      <obj_property name="ObjectShortName">rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/in_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">in_valid</obj_property>
+      <obj_property name="ObjectShortName">in_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/sample_clock_d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sample_clock_d[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_clock_d[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/sample_clock_q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sample_clock_q[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_clock_q[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/addr_d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_d[22:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_d[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/addr_q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_q[22:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_q[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/error_d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">error_d[6:0]</obj_property>
+      <obj_property name="ObjectShortName">error_d[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/error_q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">error_q[6:0]</obj_property>
+      <obj_property name="ObjectShortName">error_q[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/led_d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">led_d[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_d[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/led_q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">led_q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tvp_sampler_tb/DUT/out_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">out_valid</obj_property>
+      <obj_property name="ObjectShortName">out_valid</obj_property>
+   </wvobject>
+</wave_config>

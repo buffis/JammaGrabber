@@ -1,0 +1,23 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\syn
+#Date/Time:
+#:T   Sun Aug 23 14:03:04 2015
+#------------------------------
+	#Reading mojo_top.ncd...
+	#Loading device for application Rf_Device from file '6slx9.nph' in environment D:\Programs\Xilinx\14.7\ISE_DS\ISE\.
+	#   "mojo_top" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
+	#Design creation date: 2015.08.23.12.01.56
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'avr_interface/ready_spi_ss_AND_10_o_inv'
+	#3
+unselect comp 'avr_interface/ready_spi_ss_AND_10_o_inv'
+	#4
+select -k comp 'avr_interface/serial_tx/ctr_q<7>'

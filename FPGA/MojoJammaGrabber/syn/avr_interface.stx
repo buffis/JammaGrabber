@@ -1,0 +1,68 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/githome/projects/AvrStuff/JammaTestBoard/Verilog/Mojo-SDRAM/syn/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.73 secs
+ 
+--> Parameter xsthdpdir set to D:/githome/projects/AvrStuff/JammaTestBoard/Verilog/Mojo-SDRAM/syn/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.73 secs
+ 
+--> Reading design: avr_interface.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\spi_slave.v" into library work
+Parsing module <spi_slave>.
+Analyzing Verilog file "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\serial_tx.v" into library work
+Parsing module <serial_tx>.
+INFO:HDLCompiler:693 - "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\serial_tx.v" Line 14. parameter declaration becomes local in serial_tx with formal parameter declaration list
+Analyzing Verilog file "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\serial_rx.v" into library work
+Parsing module <serial_rx>.
+INFO:HDLCompiler:693 - "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\serial_rx.v" Line 12. parameter declaration becomes local in serial_rx with formal parameter declaration list
+Analyzing Verilog file "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\cclk_detector.v" into library work
+Parsing module <cclk_detector>.
+INFO:HDLCompiler:693 - "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\cclk_detector.v" Line 10. parameter declaration becomes local in cclk_detector with formal parameter declaration list
+Analyzing Verilog file "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\avr_interface.v" into library work
+Parsing module <avr_interface>.
+INFO:HDLCompiler:693 - "D:\githome\projects\AvrStuff\JammaTestBoard\Verilog\Mojo-SDRAM\src\avr_interface.v" Line 80. parameter declaration becomes local in avr_interface with formal parameter declaration list
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.08 secs
+ 
+--> 
+
+Total memory usage is 179320 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

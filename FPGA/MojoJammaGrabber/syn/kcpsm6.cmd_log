@@ -1,0 +1,1 @@
+vhdtdtfi -prj Mojo-SDRAM -o D:/githome/projects/AvrStuff/JammaTestBoard/Verilog/Mojo-SDRAM/syn/kcpsm6.tfi -module kcpsm6 -template D:/Programs/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work F:/Elektronik/picoblaze/kcpsm6.vhd 

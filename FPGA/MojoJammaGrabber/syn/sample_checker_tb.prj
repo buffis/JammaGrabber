@@ -1,0 +1,2 @@
+verilog work "../sample_checker.v"
+verilog work "../sample_checker_tb.v"
