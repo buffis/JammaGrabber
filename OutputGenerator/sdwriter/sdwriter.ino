@@ -1,86 +1,169 @@
 #include <SPI.h>
 
-
 /*
-  SD card read/write
- 
- This example shows how to read and write data to and from an SD card file  
- The circuit:
  * SD card attached to SPI bus as follows:
  ** MOSI - pin 11
  ** MISO - pin 12
  ** CLK - pin 13
- ** CS - pin 4
- 
- created   Nov 2010
- by David A. Mellis
- modified 9 Apr 2012
- by Tom Igoe
- 
- This example code is in the public domain.
-     
+ ** CS - pin 10
+ * IN_DATA - pin 9
+ * READY  - pin 8
+ * EOF - A5
  */
- 
+
+#define PIN_INDATA 9
+#define PIN_READY  8
+#define PIN_EOF    A5
+#define PIN_CS     10
+#define PIN_DONE   A0
+#define PIN_ERROR  A1
+
+#define STATE_INIT 0
+#define STATE_READ_DATA 1 
+#define STATE_WAIT_FOR_DATA 2 
+#define STATE_END_DATA 3 
+#define STATE_SD_ERROR 4
+#define STATE_FILE_ERROR 5
+#define STATE_DONE 6
+unsigned char state;
+
 #include <SD.h>
 
-File myFile;
+File outFile;
 
 void setup()
 {
- // Open serial communications and wait for port to open:
-  Serial.begin(9600);
-   while (!Serial) {
-    ; // wait for serial port to connect. Needed for Leonardo only
-  }
+  // Use port D as raw inputs.
+  DDRD = B00000000;
+  
+  pinMode(PIN_READY, OUTPUT);
+  pinMode(PIN_INDATA, INPUT);
+  pinMode(PIN_EOF, INPUT); 
+  pinMode(PIN_DONE, OUTPUT);
+  pinMode(PIN_ERROR, OUTPUT);
 
-  Serial.print("Initializing SD card...");
-  // On the Ethernet Shield, CS is pin 4. It's set as an output by default.
-  // Note that even if it's not used as the CS pin, the hardware SS pin 
-  // (10 on most Arduino boards, 53 on the Mega) must be left as an output 
-  // or the SD library functions will not work. 
-   pinMode(10, OUTPUT);
-   
-  if (!SD.begin(10)) {
-    Serial.println("initialization failed!");
+  digitalWrite(PIN_READY, LOW);
+  digitalWrite(PIN_DONE,  LOW);
+  digitalWrite(PIN_ERROR, LOW);
+  
+  state = STATE_INIT;
+
+  delay(3000);
+}
+
+void handle_init() {
+  digitalWrite(PIN_READY, LOW);
+  
+  if (!SD.begin(PIN_CS)) {
+    state = STATE_SD_ERROR;
     return;
   }
-  Serial.println("initialization done.");
+  outFile = SD.open("debug.txt", FILE_WRITE);
+  if (!outFile) {
+    state = STATE_FILE_ERROR;
+    return;
+  }
+  
+  state = STATE_WAIT_FOR_DATA;
+}
+
+void handle_wait_for_data() {
+  digitalWrite(PIN_READY, HIGH);
+  if (digitalRead(PIN_INDATA)) {
+    state = STATE_READ_DATA;
+    return;
+  }
+  if (digitalRead(PIN_EOF)) {
+    state = STATE_END_DATA;
+    return;
+  }
+}
+
+void handle_read_data() {
+  digitalWrite(PIN_READY, LOW);
+  unsigned char data = PIND;
+  outFile.write(data);
+  state = STATE_WAIT_FOR_DATA;
+}
+
+void handle_end_data() {
+  outFile.close();
+  state = STATE_DONE;
+}
+
+void handle_done() {
+  digitalWrite(PIN_DONE,  HIGH);
+}
+
+void handle_error(unsigned char code) {
+  digitalWrite(PIN_ERROR, HIGH);
+}
+
+void loop()
+{
+  switch (state) {
+    case STATE_INIT:
+      handle_init();
+      break;
+    case STATE_WAIT_FOR_DATA:
+      handle_wait_for_data();
+      break;
+    case STATE_READ_DATA:
+      handle_read_data();
+      break;
+    case STATE_END_DATA:
+      handle_end_data();
+      break;
+    case STATE_SD_ERROR:
+    case STATE_FILE_ERROR:
+      handle_error(state);
+      break;
+    case STATE_DONE:
+      handle_done();
+      break;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+void do_sdstuff() {
+  if (!SD.begin(10)) {
+    //Serial.println("initialization failed!");
+    return;
+  }
+  //Serial.println("initialization done.");
   
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
   myFile = SD.open("test.txt", FILE_WRITE);
-  
-  // if the file opened okay, write to it:
   if (myFile) {
-    Serial.print("Writing to test.txt...");
     myFile.println("testing 1, 2, 3.");
-    // close the file:
     myFile.close();
-    Serial.println("done.");
+    //Serial.println("done.");
   } else {
-    // if the file didn't open, print an error:
-    Serial.println("error opening test.txt");
+    //Serial.println("error opening test.txt");
   }
   
   // re-open the file for reading:
   myFile = SD.open("test.txt");
   if (myFile) {
-    Serial.println("test.txt:");
-    
     // read from the file until there's nothing else in it:
     while (myFile.available()) {
-        Serial.write(myFile.read());
+        //Serial.write(myFile.read());
     }
     // close the file:
     myFile.close();
   } else {
-    // if the file didn't open, print an error:
-    Serial.println("error opening test.txt");
+    //Serial.println("error opening test.txt");
   }
 }
-
-void loop()
-{
-    // nothing happens after setup
-}
-
+*/
